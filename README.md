@@ -42,26 +42,57 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
+```
+chanchal singhvi
+c.k. shukla
+s.n. dasgupta
+sumit chakrobarty
+```
 
 
 cat < file2
 ## OUTPUT
-
+```
+anil aggarwal
+barun sengupta
+c.k. shukla
+lalit chowdary
+s.n. dasgupta
+```
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+ ```
+file1 file2 differ: char 1, line 1
+```
 comm file1 file2
  ## OUTPUT
-
- 
+```
+      anil aggarwal
+        barun sengupta
+        c.k. shukla
+chanchal singhvi
+c.k. shukla
+        lalit chowdary
+                s.n. dasgupta
+sumit chakrobarty
+ ```
 diff file1 file2
 ## OUTPUT
-
-
-#Filters
+```
+--- file1
++++ file2
+@@ -1,4 +1,5 @@
+-chanchal singhvi
++anil aggarwal
++barun sengupta
+ c.k. shukla
++lalit chowdary
+ s.n. dasgupta
+-sumit chakrobarty
+```
+#Filter
 
 ### Create the following files file11, file22 as follows:
 
@@ -82,8 +113,10 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-
-
+```
+Hol
+Thi
+```
 
 
 cut -d "|" -f 1 file22
